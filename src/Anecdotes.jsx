@@ -7,9 +7,9 @@ export const Anecdotes = ({ anecdotes }) => {
   const nextAnecdote = () =>
     setSelected(Math.floor(Math.random() * anecdotes.length));
   const vote = () => {
-    const copy = [...votes];
-    copy[selected] += 1;
-    setVotes(copy);
+    const clonedVotes = [...votes];
+    clonedVotes[selected] += 1;
+    setVotes(clonedVotes);
   };
 
   const mostVotes = Math.max(...votes);
